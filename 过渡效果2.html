@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div{width:100px;height:50px;background-color:#B8860B;margin-bottom: 60px;}
+			
+			/*宽过渡，如果时长未规定，不会有效果，因为时长默认为0*/
+			.div-width{transition:width 2s;-webkit-transition:width 2s;
+				-moz-transition:width 2s;-ms-transition:width 2s;
+			}		
+			.div-width:hover{width:200px;}
+			
+			/*多项属性改变过渡效果，多个属性值用逗号分割*/
+			.div-transition{transition:width 2s,height 2s;-webkit-transition:width 2s,height 2s;
+			-moz-transition:width 2s,height 2s;-ms-transition:width 2s,height 2s;
+			transition-delay: 2s;/*延迟2秒执行效果*/}
+			.div-transition:hover{width:200px;height:100px;}
+		</style>
+	</head>
+	<body>
+		<div class="div div-width">
+			你说呢
+		</div>
+		<div class="div div-transition">
+			还在这里
+		</div>
+	</body>
+</html>

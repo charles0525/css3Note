@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*文本阴影*/
+			div.text-shadow{color:#ff0000;text-shadow: 3px 6px 2px #999;
+			width:100px;border:solid 1px #333;}
+			/*强制换行*/
+			div.text-wrap{
+				word-wrap: break-word;
+				/*word-break:break-word;*/
+			}
+			/*字体*/
+			@font-face {
+				font-family:"myFont";
+				src: url('http://www.w3school.com.cn/example/css3/Sansation_Light.ttf'),
+					 url('http://www.w3school.com.cn/example/css3/Sansation_Light.eot');
+			}
+			
+			div.text-font{font-family: myFont;}
+		</style>
+	</head>
+	<body>
+		<div class="text-shadow text-wrap text-font">
+			测试的哦zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+		</div>
+	</body>
+</html>

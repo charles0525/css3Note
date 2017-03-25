@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<style type="text/css">
+			.article-ad{color:#fff;position:absolute;width:200px;height:35px;display:none;}
+			.article-ad a{color:#fff;font-size:12px;line-height:35px;text-decoration: none;display: inline-block;z-index:2;position: relative;padding:0px 8px;}
+			.article-ad-bg{background-color:#000;opacity: 0.6;-moz-opacity: 0.6;-webkit-opacity: 0.6;width:100%;height:100%;display: block;z-index:1;transform: translateY(-35px);-webkit-transform: translateY(-35px);-moz-transform: translateY(-35px);}
+			.article-qr-img{width:80px;padding:5px;border:solid 1px #F0F0F0;display: none;position:absolute;z-index: 10;right:-92px;top:-130px;}
+			.article-qr-img img{width:80px;height:80px;display: block;}
+			.article-qr-img span{display: block;height:20px;font-size:12px;line-height:20px;width:100%;text-align: center;color:#333;}
+			
+			
+			@-webkit-keyframes breathe{ 0%{opacity:0}  100%{opacity:1}  }
+@keyframes breathe{ 0%{opacity:0}  100%{opacity:1}  }
+			.article-signPoint{position:absolute;right:12%;bottom:40%;z-index:10;color:#fff}
+			.article-signPoint>a{display:inline-block;margin:1px auto auto 20px;border-radius:5px;padding:3px 8px;max-width:90px;min-width:40px;font-size:12px;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;text-align:center;background-color:rgba(255,255,255,0.9)}
+			.article-signPoint>a:before{content:"";display:block;vertical-align:middle;position:absolute;top:9px;left:24px;border-top:4px solid transparent;border-bottom:4px solid transparent;border-right:6px solid rgba(255,255,255,0.9)}
+			.article-signPoint>s{position:absolute;left:3px;top:22px;z-index:20;display:block;width:12px;height:12px;border-radius:12px;background:#E23636 url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACOSURBVDhPxZHBDoMgEETxbuOpfrd+m/0e6LxksrIGru0kG9jZeQS0/FettUW1ug3hMXObxaDWeqgu1dt2YW/vHMIyNw0/WhurASo8Mo5nPYOP/e7YWAoEjAzF1acyeJkDTG8eqoe09ledw5rzcXqIQ9KbyTh+Sya/4yQAYDvezIyM7SzDL7chvCn0I5XyBa8p+nb2sLIpAAAAAElFTkSuQmCC") no-repeat;background-size:cover}
+			.article-signPoint>i:before{content:"";display:inline-block;width:15px; height:13px; top:26px; left:1px; position:relative;border-radius:18px;background-color:rgba(255,255,255,0.9);-webkit-animation:breathe 1s infinite ease-out;animation: breathe 1s infinite ease-out}
+		</style>
+	</head>
+	<body>
+		<div class="article-content">
+			<img src="img/img0012.png"> 
+		</div>
+		<div class="article-ad" data-type="qr">		
+			<a href="#">这是一个神奇的世界</a>
+			<span class="article-ad-bg">&nbsp;</span>
+			
+			<div style="position:relative;">
+				<div class="article-qr-img">
+					<img src="img/qr2.jpg">
+					<span>微信扫一扫</span>
+				</div>
+			</div>
+		</div>	
+		<div class="article-signPoint"><s></s><i></i><a href="#" target="_blank">虚拟视频飞机杯</a></div>
+		<a href="http://test.shuihulu.com?from=demo" target="_blank">测试PC</a>
+		<a href="http://waptest.shuihulu.com?from=demo">测试wap</a>
+		<a href="http://oldwap.shuihulu.com/wapmall/index.aspx?from=demo">测试旧版wap</a>
+		<a href="http://testmall.shuihulu.com/?from=demo">测试旧版PC</a>
+		<a href="http://m.shuihulu.com?from=test">测试wap</a>
+		
+		<a href="http://wap.app.shuihulu.com/WapMall/index.aspx?from=test">测试wap</a>
+		<a href="http://www.shuihulu.com/index.aspx?from=demo" target="_blank">测试PC</a>
+		<a href="http://mall.shuihulu.com/index.aspx?from=demo">测试旧版PC</a>
+	</body>
+</html>
+<script>
+    $(function () {
+//      var contentDom = $(".article-content");
+//      var adDom=$(".article-ad");
+//      var qrImgDom=$(".article-qr-img");
+//      var imgDom = contentDom.find("img").eq(0);
+//      if(!!imgDom && imgDom.width()>=400){
+//      	var imgPosLeft=imgDom.offset().left;
+//      	var imgPosTop=imgDom.offset().top;
+//      	var imgWidth=imgDom.innerWidth();
+//      	var imgHeight=imgDom.innerHeight();
+//      	var adWidth=imgWidth*0.40;
+//      	
+//      	var newPosLeft=imgPosLeft+imgWidth-adWidth;
+//      	var newPosTop=imgPosTop+imgHeight-adDom.height();
+//      	
+//      	adDom.css({"top":newPosTop+"px","left":newPosLeft+"px","width":adWidth+"px"}).show();
+//      }
+//      
+//      adDom.on("mouseover",function(){
+//      	if(adDom.attr("data-type")=="qr"){
+//      		qrImgDom.show();
+//      	}
+//      });
+//      adDom.on("mouseout",function(){
+//      	if(adDom.attr("data-type")=="qr"){
+//      		qrImgDom.hide();
+//      	}
+//      });
+    });
+</script>
+<script>
+	$(function () {
+        var contentDom = $(".article-content");
+        var adDom=$(".article-signPoint");       
+        var imgDom = contentDom.find("img").eq(0);
+        if(!!imgDom){
+        	var imgPosLeft=imgDom.offset().left;
+        	var imgPosTop=imgDom.offset().top;
+        	var imgWidth=imgDom.innerWidth();
+        	var imgHeight=imgDom.innerHeight();
+        	var adWidth=20;
+        	
+        	var newPosLeft=imgPosLeft+imgWidth-adWidth;
+        	var newPosTop=imgPosTop+imgHeight/2;
+	        adDom.css({"top":newPosTop+"px","left":newPosLeft+"px","width":adWidth+"px"}).show();
+        }
+    });
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div{width:100px;height:50px;background-color:#B8860B;margin-bottom: 60px;}			
+			/*2d转换*/
+			/*translate(),元素从当前位置移动，根据给定的x、y坐标，但原来所在位置所占空间依然在*/
+			.div-translate{transform: translate(50px,20px);-webkit-transform:translate(50px,20px);border:solid 1px green;}
+			/*rotate(),元素顺时针旋转到给定角度，如果负值逆时针旋转*/
+			.div-rotate{transform: rotate(30deg);-webkit-transform: rotate(30deg);border:solid 1px red;}
+			/*scale(),元素的尺寸会增加或减少，根据跟定的宽(x轴)，高(y轴)*/
+			/*在原来的尺寸上，x轴尺寸增加原来的2倍，y增加2倍*/
+			.div-scale{transform: scale(2,2);-webkit-transform: scale(2,2);}
+			/*skew(),根据给定的值x(x轴角度),y(y轴角度)翻转到指定位置*/
+			/*skew(20deg,20deg),围绕x轴把元素翻转20度，y轴翻转20度*/
+			.div-skew{transform: skew(20deg,20deg);-webkit-transform: skew(20deg,20deg);}
+			/*matrix(),把所有2D转换方法组合在一起*/
+			
+			/*transform-origin:允许您改变被转换元素的位置，该属性必须与transform一起使用*/
+			
+			/*===================================================================*/
+			
+			/*3d转换*/
+			/*元素根据x轴旋转180度*/
+			.div-rotateX{transform: rotateX(180deg);-webkit-transform: rotateX(180deg);}
+			/*元素根据y轴旋转180度*/
+			.div-rotateY{transform: rotateY(180deg);-webkit-transform: rotateY(180deg);}
+			/*元素根据z轴旋转90度*/
+			.div-rotateZ{transform: rotateZ(90deg);-webkit-transform: rotateZ(90deg);}
+		</style>
+	</head>
+	<body>
+		<div class="div div-translate">你好</div>
+		<div class="div div-rotate">你好 rotate</div>
+		<div class="div div-scale">明天有雨吗</div>
+		<div class="div div-skew">今天还是阴天呐</div>
+		
+		<div class="div div-rotateX">3D旋转 rotateX</div>
+		<div class="div div-rotateY">3D旋转 rotateY</div>
+		<div class="div div-rotateZ">3D旋转 rotateZ</div>
+	</body>
+</html>

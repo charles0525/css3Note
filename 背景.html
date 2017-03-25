@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.bg-size{width:200px;height:50px;background:url(img/bg_flower_multi.gif) no-repeat;background-size:100% 100%;}
+			.bg-origin{
+				width:300px;
+				height:50px;
+				padding:10px;
+				background:url(img/bg_flower_multi.gif) no-repeat;
+				background-size:100% 100%;
+				background-origin:content-box;/*背景定位区域，content-box:内容区域，padding-box:填充区域,border-box:边框区域*/
+				border:solid 5px red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bg-size">今天是个好日子</div>
+		<div class="bg-origin">
+			曾经沧海难为水
+		</div>
+	</body>
+</html>

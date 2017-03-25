@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.div{width:100px;height:50px;background-color:#B8860B;margin-bottom: 60px;}
+			
+			/*动画*/
+			/*from{} to{}*/
+			@keyframes myAnimation{
+				from{width:100px;height:50px;}
+				to{width:200px;height:100px;}
+			}
+			@-webkit-keyframes myAnimation{
+				from{width:100px;height:50px;}
+				to{width:200px;height:100px;}
+			}
+			.div-animation{
+				animation:myAnimation 2s;
+				-webkit-animation:myAnimation 2s;
+			}
+			/*使用百分比*/
+			@keyframes secondAnimation{
+				0%{background-color:#B8860B;}
+				25%{background-color:#008000;}
+				50%{background-color:#E23636;}
+				75%{background-color:#FFFF00;}
+				100%{background-color:#999999;}
+			}
+			@-webkit-keyframes secondAnimation{
+				0%{background-color:#B8860B;}
+				25%{background-color:#008000;}
+				50%{background-color:#E23636;}
+				75%{background-color:#FFFF00;}
+				100%{background-color:#999999;}
+			}
+			.div-animation2{animation:secondAnimation 5s;-webkit-animation:secondAnimation 5s;
+			animation-delay: 2s;-webkit-animation-delay: 2s;
+			animation-iteration-count: 2;
+			-webkit-animation-iteration-count:2;/*播放次数*/
+			animation-duration: alternate;/*动画应该轮流反向播放*/
+			animation-play-state:paused;/*暂停动画*/
+			-webkit-animation-play-state:paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div div-animation">
+			动画
+		</div>
+		<div class="div div-animation2">
+			动画
+		</div>
+	</body>
+</html>

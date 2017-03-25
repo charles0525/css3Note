@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.container{width:100%;margin:0px auto;}
+			.header:first-child{
+				font-size:24px;
+			}
+			.container [class~="common"]{font-size:20px;}/*属性包含common*/
+			[class|=page]{border:solid 1px red;}/*属性以page单词开头的元素*/
+			.page-title:before{content: "开始";color:#B8860B}
+			.page-title:after{content:"结束";color:#008000}
+			/*选择以内容'img/'开头的元素*/
+			[src^='img/']{width:50px;height:50px;border:solid 1px #999;}
+			/*选择href属性值以'.pdf'结尾的元素*/
+			[href$=".pdf"]{font-size:12px;text-decoration:none;}/
+			/*选择属性值包含shuihulu.com元素*/
+			[href*="shuihulu.com"]{font-size:12px;color:#FF0000;}
+			/*选择.page-list父级元素的子级元素第二个元素*/
+			.page-list:nth-child(2){
+				border:solid 1px blue;
+				font-size:12px;
+			}
+			/*突出显示活动的 HTML 锚*/
+			.p-answer li:target{
+				background-color:#B8860B;
+			}
+			/*控件 有效、无效状态下样式*/
+			:enabled{border:0px;}
+			:disabled{color:#fff;background-color:#999;border:0px;}
+			/*选择非div所有元素*/
+			.container *:not(div){
+				background-color:#999;
+			}
+			/*设置选中内容样式*/
+			.container *::selection{color:#fff;background-color:#000;}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header common">
+				<span>头部</span>
+			</div>
+			<div class="page">
+				<div class="page-title">
+					标题
+				</div>
+				<div class="page-list">
+					<img src="img/bg_flower_multi.gif">
+					<a href="ssll.pdf">下载</a>
+					<a href="http://www.shuihulu.com/abc.doc">说明</a>
+				</div>
+				<div>
+					<div>列表1</div>
+					<div>列表2</div>
+				</div>
+				<div class="p-qa">
+					<ul class="p-questions">
+						<li>
+							<a href="#answer1">问题1</a>							
+						</li>
+						<li>
+							<a href="#answer2">问题2</a>							
+						</li>
+						<li>
+							<a href="#answer3">问题3</a>							
+						</li>
+					</ul>
+					<ul class="p-answer">
+						<li id="answer1">
+							答案1						
+						</li>
+						<li id="answer2">
+							答案2				
+						</li>
+						<li id="answer3">
+							答案3				
+						</li>
+					</ul>
+					<div class="page-form">
+						<input type="button" value="取消" />
+						<input type="button" disabled="true" value="提交"/>
+					</div>
+				</div>
+			</div>
+			<div class="foot common">
+				底部
+			</div>
+		</div>
+	</body>
+</html>
